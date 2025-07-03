@@ -30,7 +30,7 @@ DEBUG = True
 
 # ALLOWED_HOSTS = []
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'django-r8ch.onrender.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'django-r8ch.onrender.com','django-8wml.onrender.com']
 
 
 # Application definition
