@@ -80,17 +80,20 @@ WSGI_APPLICATION = 'firstDjango.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'polls',
-        'USER': 'root',
-        'PASSWORD': 'root',
-        'HOST': 'host.docker.internal',  # or 'host.docker.internal' or container IP
-        'PORT': '3307',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'polls',
+#         'USER': 'root',
+#         'PASSWORD': 'root',
+#         'HOST': 'host.docker.internal',  # or 'host.docker.internal' or container IP
+#         'PORT': '3307',
+#     }
+# }
 
+DATABASES = {
+    'default': dj_database_url.config(default=config('DATABASE_URL'))
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
